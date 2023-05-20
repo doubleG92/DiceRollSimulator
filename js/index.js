@@ -16,7 +16,20 @@ function clickForShuffle () {
     }
 
     const randomShuffle = Math.floor(Math.random() * groupOfDices.length)
-    
+
+    dices.innerHTML = ""
+
+    dices.appendChild(groupOfDices[randomShuffle])
+
+    counter++
+
+    const cloneTheShuffle = groupOfDices[randomShuffle].cloneNode(true)
+    const liElement = document.createElement('li')
+    const pElement = document.createElement('p')
+    pElement.textContent = `Roll ${counter}`
+    liElement.appendChild(pElement)
+    liElement.appendChild(cloneTheShuffle)
+    addTheResult.appendChild(liElement)
 }
 
 button.addEventListener('click',clickForShuffle) 
