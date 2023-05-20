@@ -46,9 +46,9 @@ ul li {
 }
 @keyframes rollDice {
   from {
-    transform: rotateX -720deg;
+    transform: rotateX(-720deg);
   }
   to {
-    transform: rotateX 720deg;
+    transform: rotateX(720deg);
   }
 }

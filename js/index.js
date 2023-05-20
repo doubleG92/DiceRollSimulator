@@ -30,6 +30,12 @@ function clickForShuffle () {
     liElement.appendChild(pElement)
     liElement.appendChild(cloneTheShuffle)
     addTheResult.appendChild(liElement)
+
+    dices.classList.remove('dice-animation')
+
+    setTimeout(() => {
+        dices.classList.add('dice-animation')
+    })
 }
 
 button.addEventListener('click',clickForShuffle) 
