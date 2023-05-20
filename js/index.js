@@ -14,4 +14,9 @@ function clickForShuffle () {
         element.classList.add('fa-solid', `fa-dice-${dicesNumbers[i]}`)
         groupOfDices.push(element)
     }
+
+    const randomShuffle = Math.floor(Math.random() * groupOfDices.length)
+    
 }
+
+button.addEventListener('click',clickForShuffle) 
