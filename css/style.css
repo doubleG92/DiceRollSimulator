@@ -1,3 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 h1 {
-  color: antiquewhite;
+  margin-top: 50px;
+  font-size: 50px;
+}
+div i {
+  margin-top: 20px;
+  font-size: 50px;
+}
+button {
+  background-color: lightblue;
+  color: white;
+  font-size: 30px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #9ac0cc;
+}
+ul {
+  max-width: 600px;
+  margin: auto;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  padding: 16px;
+  background-color: #c0bcbc4b;
+  border-radius: 20px;
+  margin-top: 16px;
+  align-items: center;
+  box-shadow: 2px 4px 5px gray;
+}
+.dice-animation {
+  animation-name: rollDice;
+  animation-duration: 1s;
+}
+@keyframes rollDice {
+  from {
+    transform: rotateX -720deg;
+  }
+  to {
+    transform: rotateX 720deg;
+  }
 }
