@@ -39,3 +39,7 @@ function clickForShuffle () {
 }
 
 button.addEventListener('click',clickForShuffle) 
+
+
+const startBtn = document.getElementById('startBtn');
+const welcomeWindow = document.getElementById('welcomeWindow');
