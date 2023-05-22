@@ -6,6 +6,7 @@ const diceSound = document.getElementById('diceSound')
 const diceSixSound = document.getElementById('diceSixSound')
 const diceOneSound = document.getElementById('diceOneSound')
 const openingSound = document.getElementById('welcomeSound')
+const audioElements = document.querySelectorAll("audio")
 
 const dicesNumbers = ['one', 'two', 'three', 'four', 'five', 'six']
 
@@ -41,10 +42,24 @@ function clickForShuffle () {
     setTimeout(() => {
         dices.classList.add('dice-animation')
     })
+
+    if (!audioElements.paused) {
+        audioElements.forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    }
+
+    if (dicesNumbers[randomShuffle] === 'six') {
+        diceSixSound.play()
+    }else if (dicesNumbers[randomShuffle] === 'one') {
+        diceOneSound.play()
+    }else {
+        diceSound.play()
+    }
 }
 
 button.addEventListener('click',clickForShuffle) 
-
 
 const startBtn = document.getElementById('startBtn');
 const welcomeWindow = document.getElementById('welcomeWindow');
