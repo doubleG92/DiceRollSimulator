@@ -2,6 +2,11 @@ const dices = document.getElementById('dice')
 const button = document.getElementById('btn')
 const addTheResult = document.getElementById('rollingResult')
 
+const diceSound = document.getElementById('diceSound')
+const diceSixSound = document.getElementById('diceSixSound')
+const diceOneSound = document.getElementById('diceOneSound')
+const openingSound = document.getElementById('welcomeSound')
+
 const dicesNumbers = ['one', 'two', 'three', 'four', 'five', 'six']
 
 let counter = 0
@@ -43,3 +48,8 @@ button.addEventListener('click',clickForShuffle)
 
 const startBtn = document.getElementById('startBtn');
 const welcomeWindow = document.getElementById('welcomeWindow');
+
+startBtn.addEventListener('click', function() {
+    welcomeWindow.style.display = "none"
+    openingSound.play()
+})
